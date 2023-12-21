@@ -1,0 +1,83 @@
+version: "3.2"
+
+services:
+  rs_shard1_set1:
+    image: mongo:4.4.4
+    container_name: rs_shard1_set1
+    volumes:
+      - rs_shard1_set1:/data/db
+    expose:
+      - 27014
+    ports:
+        - 27014:27014
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27014", "--replSet", "rs_shard1", "--shardsvr" ]
+  rs_shard1_set2:
+    image: mongo:4.4.4
+    container_name: rs_shard1_set2
+    volumes:
+      - rs_shard1_set2:/data/db
+    expose:
+      - 27015
+    ports:
+        - 27015:27015
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27015", "--replSet", "rs_shard1", "--shardsvr" ]
+  rs_shard1_set3:
+    image: mongo:4.4.4
+    container_name: rs_shard1_set3
+    volumes:
+      - rs_shard1_set3:/data/db
+    expose:
+        - 27016
+    ports:
+        - 27016:27016
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27016", "--replSet", "rs_shard1", "--shardsvr" ]
+
+  # rs-config
+  rs_config_set1:
+    image: mongo:4.4.4
+    container_name: rs_config_set1
+    volumes:
+      - rs_config_set1:/data/configdb
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27017", "--replSet", "rs_config", "--configsvr" ]
+  rs_config_set2:
+    image: mongo:4.4.4
+    container_name: rs_config_set2
+    volumes:
+      - rs_config_set2:/data/configdb
+    expose:
+      - 27018
+    ports:
+      - 27018:27018
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27018", "--replSet", "rs_config", "--configsvr" ]
+  rs_config_set3:
+    image: mongo:4.4.4
+    container_name: rs_config_set3
+    volumes:
+      - rs_config_set3:/data/configdb
+    expose:
+      - 27019
+    ports:
+      - 27019:27019
+    entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--port", "27019", "--replSet", "rs_config", "--configsvr" ]
+
+  # rs-mongos
+  rs_mongos:
+    image: mongo:4.4.4
+    container_name: rs_mongos
+    expose:
+      - 27020
+    ports:
+      - 27020:27020
+    entrypoint: [ "/usr/bin/mongos", "--bind_ip_all", "--port", "27020", "--configdb", "rs_config/rs_config-01:27017,rs_config-02:27018,rs_config-03:27019" ]
+
+volumes:
+    rs_shard1_set1:
+    rs_shard1_set2:
+    rs_shard1_set3:
+    rs_config_set1:
+    rs_config_set2:
+    rs_config_set3:

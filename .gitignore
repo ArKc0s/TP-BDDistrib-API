@@ -17,7 +17,7 @@ target/
 .idea
 *.iws
 *.iml
-*.ipr
+*.iprgit
 
 ### NetBeans ###
 /nbproject/private/
@@ -28,6 +28,3 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
-### VS Code ###
-.vscode/

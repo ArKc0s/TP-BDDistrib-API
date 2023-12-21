@@ -30,4 +30,8 @@ public class Groupe {
     public void setVille(Ville ville) {
         this.ville = ville;
     }
+
+    public boolean isPresent() {
+        return false;
+    }
 }

@@ -8,7 +8,7 @@ public class Materiel {
     private String modele;
     private String type;
     private float prix;
-    private int id_groupe;
+    private String id_groupe;
 
     public int getId_materiel() {
         return id_materiel;
@@ -58,11 +58,11 @@ public class Materiel {
         this.prix = prix;
     }
 
-    public int getId_groupe() {
+    public String getId_groupe() {
         return id_groupe;
     }
 
-    public void setId_groupe(int id_groupe) {
+    public void setId_groupe(String id_groupe) {
         this.id_groupe = id_groupe;
     }
 }

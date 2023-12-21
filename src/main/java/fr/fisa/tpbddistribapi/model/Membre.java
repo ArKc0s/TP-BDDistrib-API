@@ -7,6 +7,7 @@ public class Membre {
     private String nom;
     private String prenom;
     private String email;
+    private String mot_de_passe;
     private boolean actif;
     private Adresse adresse;
     private int id_groupe;
@@ -65,5 +66,13 @@ public class Membre {
 
     public int getId_groupe() {
         return id_groupe;
+    }
+
+    public String getMot_de_passe() {
+        return mot_de_passe;
+    }
+
+    public void setMot_de_passe(String mot_de_passe) {
+        this.mot_de_passe = mot_de_passe;
     }
 }

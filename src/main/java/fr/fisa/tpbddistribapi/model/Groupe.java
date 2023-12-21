@@ -5,8 +5,7 @@ public class Groupe {
     @Id
     private String numero_groupe;
     private String nom;
-    private String ville;
-    private int code_postal;
+    private Ville ville;
 
     public String getNumero_groupe() {
         return numero_groupe;
@@ -24,19 +23,11 @@ public class Groupe {
         this.nom = nom;
     }
 
-    public String getVille() {
+    public Ville getVille() {
         return ville;
     }
 
-    public void setVille(String ville) {
+    public void setVille(Ville ville) {
         this.ville = ville;
-    }
-
-    public int getCode_postal() {
-        return code_postal;
-    }
-
-    public void setCode_postal(int code_postal) {
-        this.code_postal = code_postal;
     }
 }

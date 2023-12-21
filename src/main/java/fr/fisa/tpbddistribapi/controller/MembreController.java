@@ -18,5 +18,6 @@ public class MembreController {
     public Membre inscrireMembre(@RequestBody Membre membre) {
         // Effectuer des validations si nécessaire
         return membreService.saveMembre(membre);
+
     }
 }

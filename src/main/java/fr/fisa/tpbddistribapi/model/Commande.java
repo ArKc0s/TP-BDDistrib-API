@@ -5,35 +5,35 @@ import org.springframework.data.annotation.Id;
 
 public class Commande {
     @Id
-    private int id_commande;
-    private String id_membre_client;
-    private String id_membre_actif;
+    private int idCommande;
+    private String idMembreClient;
+    private String idMembreActif;
     private Date date;
     private ArrayList<Materiel> list;
-    private float prix_total;
+    private float prixTotal;
 
-    public int getId_commande() {
-        return id_commande;
+    public int getIdCommande() {
+        return idCommande;
     }
 
-    public void setId_commande(int id_commande) {
-        this.id_commande = id_commande;
+    public void setIdCommande(int idCommande) {
+        this.idCommande = idCommande;
     }
 
-    public String getId_membre_client() {
-        return id_membre_client;
+    public String getIdMembreClient() {
+        return idMembreClient;
     }
 
-    public void setId_membre_client(String id_membre_client) {
-        this.id_membre_client = id_membre_client;
+    public void setIdMembreClient(String idMembreClient) {
+        this.idMembreClient = idMembreClient;
     }
 
-    public String getId_membre_actif() {
-        return id_membre_actif;
+    public String getIdMembreActif() {
+        return idMembreActif;
     }
 
-    public void setId_membre_actif(String id_membre_actif) {
-        this.id_membre_actif = id_membre_actif;
+    public void setIdMembreActif(String idMembreActif) {
+        this.idMembreActif = idMembreActif;
     }
 
     public Date getDate() {
@@ -52,11 +52,11 @@ public class Commande {
         this.list = list;
     }
 
-    public float getPrix_total() {
-        return prix_total;
+    public float getPrixTotal() {
+        return prixTotal;
     }
 
-    public void setPrix_total(float prix_total) {
-        this.prix_total = prix_total;
+    public void setPrixTotal(float prixTotal) {
+        this.prixTotal = prixTotal;
     }
 }

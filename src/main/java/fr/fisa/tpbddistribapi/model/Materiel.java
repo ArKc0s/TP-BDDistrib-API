@@ -2,28 +2,28 @@ package fr.fisa.tpbddistribapi.model;
 import org.springframework.data.annotation.Id;
 public class Materiel {
     @Id
-    private int id_materiel;
-    private String numero_de_serie;
+    private int idMateriel;
+    private String numeroDeSerie;
     private String marque;
     private String modele;
     private String type;
     private float prix;
-    private String id_groupe;
+    private String idGroupe;
 
-    public int getId_materiel() {
-        return id_materiel;
+    public int getIdMateriel() {
+        return idMateriel;
     }
 
-    public void setId_materiel(int id_materiel) {
-        this.id_materiel = id_materiel;
+    public void setIdMateriel(int idMateriel) {
+        this.idMateriel = idMateriel;
     }
 
-    public String getNumero_de_serie() {
-        return numero_de_serie;
+    public String getNumeroDeSerie() {
+        return numeroDeSerie;
     }
 
-    public void setNumero_de_serie(String numero_de_serie) {
-        this.numero_de_serie = numero_de_serie;
+    public void setNumeroDeSerie(String numeroDeSerie) {
+        this.numeroDeSerie = numeroDeSerie;
     }
 
     public String getMarque() {
@@ -58,11 +58,11 @@ public class Materiel {
         this.prix = prix;
     }
 
-    public String getId_groupe() {
-        return id_groupe;
+    public String getIdGroupe() {
+        return idGroupe;
     }
 
-    public void setId_groupe(String id_groupe) {
-        this.id_groupe = id_groupe;
+    public void setIdGroupe(String idGroupe) {
+        this.idGroupe = idGroupe;
     }
 }

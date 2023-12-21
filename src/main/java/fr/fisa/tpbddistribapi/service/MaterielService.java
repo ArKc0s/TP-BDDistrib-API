@@ -18,11 +18,11 @@ public class MaterielService {
             this.materielRepository = materielRepository;
         }
 
-        public void ajouterMaterielAuGroupe(Long groupeId, Materiel materiel) {
-            Groupe Groupe = groupeRepository.findByNumeroGroupe(groupeId);
-            if (Groupe.isPresent()) {
-                String group = Groupe.getNumero_groupe();
-                materiel.setId_groupe(group);
+        public void ajouterMaterielAuGroupe(String groupeId, Materiel materiel) {
+            Groupe groupe = groupeRepository.findByNumeroGroupe(groupeId);
+            if (groupe.isPresent()) {
+                String group = groupe.getNumeroGroupe();
+                materiel.setIdGroupe(group);
                 materielRepository.save(materiel);
             }
         }

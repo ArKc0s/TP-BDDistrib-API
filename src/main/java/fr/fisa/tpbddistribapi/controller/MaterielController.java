@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/materiels")
 public class MaterielController{
 
-        private final MaterielService groupeService;
+        private final MaterielService materialService;
 
         @Autowired
-        public MaterielController(MaterielService groupeService) {
-            this.groupeService = groupeService;
+        public MaterielController(MaterielService materialService) {
+            this.materialService = materialService;
         }
 
         @PostMapping("/{groupeId}/ajouter-materiel")
         public ResponseEntity<String> ajouterMaterielAuGroupe(
-                @PathVariable Long groupeId,
+                @PathVariable String groupeId,
                 @RequestBody Materiel materiel) {
-            groupeService.ajouterMaterielAuGroupe(groupeId, materiel);
+            materialService.ajouterMaterielAuGroupe(groupeId, materiel);
             return ResponseEntity.ok("Matériel ajouté avec succès au groupe.");
         }
     }

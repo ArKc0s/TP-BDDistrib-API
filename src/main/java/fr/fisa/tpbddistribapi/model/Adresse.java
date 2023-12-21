@@ -3,17 +3,17 @@ import org.springframework.data.annotation.Id;
 
 public class Adresse {
     @Id
-    private int id_adresse;
+    private int idAdresse;
     private int numero;
     private String rue;
     private Ville ville;
 
-    public int getId_adresse() {
-        return id_adresse;
+    public int getIdAdresse() {
+        return idAdresse;
     }
 
-    public void setId_adresse(int id_adresse) {
-        this.id_adresse = id_adresse;
+    public void setIdAdresse(int idAdresse) {
+        this.idAdresse = idAdresse;
     }
 
     public int getNumero() {

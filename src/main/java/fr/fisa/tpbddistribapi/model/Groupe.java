@@ -3,16 +3,16 @@ import org.springframework.data.annotation.Id;
 
 public class Groupe {
     @Id
-    private String numero_groupe;
+    private String numeroGroupe;
     private String nom;
     private Ville ville;
 
-    public String getNumero_groupe() {
-        return numero_groupe;
+    public String getNumeroGroupe() {
+        return numeroGroupe;
     }
 
-    public void setNumero_groupe(String numero_groupe) {
-        this.numero_groupe = numero_groupe;
+    public void setNumeroGroupe(String numeroGroupe) {
+        this.numeroGroupe = numeroGroupe;
     }
 
     public String getNom() {

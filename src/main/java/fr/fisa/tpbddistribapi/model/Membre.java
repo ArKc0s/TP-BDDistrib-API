@@ -8,10 +8,10 @@ public class Membre {
     private String nom;
     private String prenom;
     private String email;
-    private String mot_de_passe;
+    private String motDePasse;
     private boolean actif;
     private Adresse adresse;
-    private int id_groupe;
+    private int idGroupe;
 
     public void setId(int id) {
         this.id = id;
@@ -37,8 +37,8 @@ public class Membre {
         this.adresse = adresse;
     }
 
-    public void setId_groupe(int id_groupe) {
-        this.id_groupe = id_groupe;
+    public void setIdGroupe(int idGroupe) {
+        this.idGroupe = idGroupe;
     }
 
     public int getId() {
@@ -65,15 +65,15 @@ public class Membre {
         return adresse;
     }
 
-    public int getId_groupe() {
-        return id_groupe;
+    public int getIdGroupe() {
+        return idGroupe;
     }
 
-    public String getMot_de_passe() {
-        return mot_de_passe;
+    public String getMotDePasse() {
+        return motDePasse;
     }
 
-    public void setMot_de_passe(String mot_de_passe) {
-        this.mot_de_passe = mot_de_passe;
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
     }
 }

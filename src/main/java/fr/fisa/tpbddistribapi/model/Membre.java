@@ -1,4 +1,5 @@
 package fr.fisa.tpbddistribapi.model;
+
 import org.springframework.data.annotation.Id;
 
 public class Membre {
